@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action = "{% url 'letter_cnt' %}" method = "POST">
+        {% csrf_token %}
+        <textarea name="content" cols = "50" rows ="30">
+            문장을 입력하시오
+        </textarea>
+        <br />
+        <button type = 'submit'>입력 > </button>
+    </form>
+</body>
+</html>
